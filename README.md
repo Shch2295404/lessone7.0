@@ -30,17 +30,17 @@ def my_summa():
 
 # Создание главного окна
 root = tk.Tk()
-root.title("Cyммa чисел")  # Set the title of the window
-root.geometry("500x300")  # Set the size of the window
+root.title("Cyммa чисел")  # Установка заголовка окна
+root.geometry("500x300")  # Установка размера окна
 
 # Создаем метку для отображения инструкций
 label = tk.Label(root, font=("Arial", 14), text="Введите через пробел")
-label.pack()  # Add the label to the window
+label.pack()  # Добавить поле ввода в окно
 
 # Создаем поле для ввода чисел
 entry = tk.Entry(root)
 entry.delete(0, tk.END)  # Очистить поле ввода
-entry.pack()  # Добавьте поле ввода в окно
+entry.pack()  # Добавить поле ввода в окно
 
 # Создаем кнопку для запуска вычисления суммы
 button = tk.Button(root, font=("Arial", 14), text="Пocчитать сумму", command=my_summa)
