@@ -12,41 +12,41 @@ def my_summa():
     преобразует каждое число в целое и вычисляет сумму. Затем результат
     выводится на экран в виде ярлыка.
     """
-    # Получите ввод от пользователя и разделите его на список чисел
+    # Получаем ввод от пользователя и разделите его на список чисел
     numbers = entry.get().split()
 
-    # Initialize the result to 0
+    # Инициализируем результат в 0
     result = 0
 
-    # Iterate over each number in the list
+    # Итерация по каждому числу в списке
     for number in numbers:
-        # Convert the number to an integer and add it to the result
+        # Преобразуйем число в целое и добавьте его к результату
         number = int(number)
         result += number
 
-        # Update the label with the current sum
+        # Обновление метки с текущей суммой
         label.config(text=f"Сумма чисел - {result}")
 
 
-# Create the main window
+# Создание главного окна
 root = tk.Tk()
 root.title("Cyммa чисел")  # Set the title of the window
 root.geometry("500x300")  # Set the size of the window
 
-# Create a label to display the instructions
+# Создаем метку для отображения инструкций
 label = tk.Label(root, font=("Arial", 14), text="Введите через пробел")
 label.pack()  # Add the label to the window
 
-# Create an entry field for the user to input numbers
+# Создаем поле для ввода чисел
 entry = tk.Entry(root)
 entry.delete(0, tk.END)  # Очистить поле ввода
 entry.pack()  # Добавьте поле ввода в окно
 
-# Create a button to trigger the sum calculation
+# Создаем кнопку для запуска вычисления суммы
 button = tk.Button(root, font=("Arial", 14), text="Пocчитать сумму", command=my_summa)
-button.pack()  # Добавьте кнопку в окно
+button.pack()  # Добавить кнопку в окно
 
-# Start the main event loop
+# Запускаем основной цикл обработки событий
 root.mainloop()
 
 ```
